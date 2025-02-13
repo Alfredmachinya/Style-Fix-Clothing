@@ -1,25 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>My First GitHub Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Fix Clothing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .slideshow-container {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+        }
+        .slides {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+        .button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            text-align: center;
+            background-color: #000;
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-   <header>
-       <h1>Welcome to Style Fix Clothing!</h1>
-   </header>
- 
-   <main>
-       <p>This is a simple webpage hosted on GitHub Pages.</p>
-       <p>Here's a picture of our logo:</p>
-       <img src="style fix logo.jpg" alt="logo">
-      
-       <p>Visit <a href="https://github.com">Style Fix Clothing</a> to learn more about our store.</p>
-   </main>
- 
-   <footer>
-       <p>&copy; 2025 Style Fix Clothing</p>
-   </footer>
+
+    <h1>Welcome to Style Fix Clothing</h1>
+
+    <div class="slideshow-container">
+        <div class="slides active">
+            <img src="image1.jpg" alt="Slide 1" style="width:100%">
+        </div>
+        <div class="slides">
+            <img src="image2.jpg" alt="Slide 2" style="width:100%">
+        </div>
+        <div class="slides">
+            <img src="image3.jpg" alt="Slide 3" style="width:100%">
+        </div>
+    </div>
+
+    <a href="store.html" class="button">Visit our store</a>
+
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slides');
+
+        function showSlides() {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].classList.add('active');
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+
+        showSlides();
+    </script>
+
 </body>
 </html>
