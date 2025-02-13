@@ -18,6 +18,8 @@
         }
         .slides {
             display: none;
+            width: 100%;
+            height: auto; 
         }
         .active {
             display: block;
@@ -28,9 +30,10 @@
             margin: 20px auto;
             padding: 10px;
             text-align: center;
-            background-color: #000;
+            background-color: blue; 
             color: #fff;
             text-decoration: none;
+            border-radius: 5px; 
         }
     </style>
 </head>
@@ -40,26 +43,26 @@
 
     <div class="slideshow-container">
         <div class="slides active">
-            <img src="slide1.jpg" alt="Slide 1" style="width:100%">
+            <img src="slide1.jpg" alt="Slide 1">
         </div>
         <div class="slides">
-            <img src="slide2.jpg" alt="Slide 2" style="width:100%">
+            <img src="slide2.jpg" alt="Slide 2">
         </div>
         <div class="slides">
-            <img src="slide 3.jpg" alt="Slide 3" style="width:100%">
+            <img src="slide3.jpg" alt="Slide 3">
         </div>
         <div class="slides">
-            <img src="slide 4.jpg" alt="Slide 4" style="width:100%">
+            <img src="slide4.jpg" alt="Slide 4">
         </div>
         <div class="slides">
-            <img src="slide 5.jpg" alt="Slide 5" style="width:100%">
+            <img src="slide5.jpg" alt="Slide 5">
         </div>
         <div class="slides">
-            <img src="slide 6.jpg" alt="Slide 6" style="width:100%">
+            <img src="slide6.jpg" alt="Slide 6">
         </div>
     </div>
 
-    <a href="store.html" class="button">Visit our store</a>
+    <a href="https://wa.me/c/26773684840" class="button">Visit our store</a>
 
     <script>
         let slideIndex = 0;
@@ -70,7 +73,7 @@
             slideIndex++;
             if (slideIndex > slides.length) {slideIndex = 1}
             slides[slideIndex-1].classList.add('active');
-            setTimeout(showSlides, 3000); // Change image every 3 seconds
+            setTimeout(showSlides, 3000); 
         }
 
         showSlides();
