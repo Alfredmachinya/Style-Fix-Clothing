@@ -18,8 +18,9 @@
         }
         .slides {
             display: none;
-            width: 100%;
-            height: auto; 
+            width: 50%; /* Reduced image size by half */
+            height: auto;
+            margin: auto;
         }
         .active {
             display: block;
@@ -30,26 +31,42 @@
             margin: 20px auto;
             padding: 10px;
             text-align: center;
-            background-color: blue; 
+            background-color: blue; /* Changed to blue */
             color: #fff;
             text-decoration: none;
-            border-radius: 5px; 
+            border-radius: 5px; /* Added border radius */
+        }
+        .dots-container {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .active-dot {
+            background-color: #717171;
         }
     </style>
 </head>
 <body>
 
     <h1>Welcome to Style Fix Clothing</h1>
+    <p>Your go-to destination for trendy and stylish clothing!</p> <!-- Added business slogan -->
 
     <div class="slideshow-container">
         <div class="slides active">
-            <img src="slide1.jpg" alt="Slide 1">
+            <img src="slide 1.jpg" alt="Slide 1">
         </div>
         <div class="slides">
-            <img src="slide2.jpg" alt="Slide 2">
+            <img src="slide 2.jpg" alt="Slide 2">
         </div>
         <div class="slides">
-            <img src="slide3.jpg" alt="Slide 3">
+            <img src="slide 3.jpg" alt="Slide 3">
         </div>
         <div class="slides">
             <img src="slide4.jpg" alt="Slide 4">
@@ -62,18 +79,30 @@
         </div>
     </div>
 
-    <a href="https://wa.me/c/26773684840" class="button">Visit our store</a>
+    <div class="dots-container">
+        <span class="dot active-dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div> 
+
+    <a href="store.html" class="button">Visit our store</a>
 
     <script>
         let slideIndex = 0;
         const slides = document.querySelectorAll('.slides');
+        const dots = document.querySelectorAll('.dot');
 
         function showSlides() {
             slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active-dot'));
             slideIndex++;
             if (slideIndex > slides.length) {slideIndex = 1}
             slides[slideIndex-1].classList.add('active');
-            setTimeout(showSlides, 3000); 
+            dots[slideIndex-1].classList.add('active-dot');
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
         }
 
         showSlides();
