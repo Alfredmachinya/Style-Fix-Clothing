@@ -78,6 +78,11 @@
             height: 100%;
             overflow: auto;
             background-color: rgba(0, 0, 0, 0.9);
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-content {
+            border-radius: 10px;
         }
         .modal img {
             margin: auto;
@@ -143,11 +148,13 @@
     <main>
         <h2>Gallery</h2>
         <div class="gallery">
-            <img src="bestill.cap.jpg" alt="Clothing 1" onclick="openModal(this, 0)">
-            <img src="faith.bag.jpg" alt="Clothing 2" onclick="openModal(this, 1)">
-            <img src="faith.cushion.jpg" alt="Clothing 3" onclick="openModal(this, 2)">
-            <img src="faith.'hoodie.jpg" alt="Clothing 4" onclick="openModal(this, 3)">
-            <img src="jesus.buckethead.jpg" alt="Clothing 5" onclick="openModal(this, 4)">
+            <img src="bestill.cap.jpg" alt="Be still cap" onclick="openModal(this, 0)">
+            <img src="faith.bag.jpg" alt="Faith bag" onclick="openModal(this, 1)">
+            <img src="faith.cushion.jpg" alt="Faith cushion" onclick="openModal(this, 2)">
+            <img src="faith.'hoodie.jpg" alt="Faith hoodie" onclick="openModal(this, 3)">
+            <img src="jesus.buckethead.jpg" alt="Jesus bucket-head" onclick="openModal(this, 4)">
+            <img src="jireh.sweater.jpg" alt="Jireh sweater" onclick="openModal(this, 5)">
+            <img src="yaweh.hoodie.jpg" alt="Yaweh hoodie" onclick="openModal(this, 6)">
         </div>
     </main>
 
@@ -169,7 +176,7 @@
             const captionText = document.getElementById("caption");
 
             currentIndex = index;
-            modal.style.display = "block";
+            modal.style.display = "flex";
             modalImage.src = imgElement.src;
             captionText.innerHTML = imgElement.alt;
         }
