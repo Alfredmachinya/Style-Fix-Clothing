@@ -83,6 +83,7 @@
         }
         .modal-content {
             border-radius: 10px;
+            position: relative;
         }
         .modal img {
             margin: auto;
@@ -93,7 +94,13 @@
         .modal #caption {
             color: #fff;
             text-align: center;
-            margin-top: 10px;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 5px 10px;
+            border-radius: 5px;
         }
         .close {
             position: absolute;
@@ -155,6 +162,9 @@
             <img src="jesus.buckethead.jpg" alt="Jesus bucket-head" onclick="openModal(this, 4)">
             <img src="jireh.sweater.jpg" alt="Jireh sweater" onclick="openModal(this, 5)">
             <img src="yaweh.hoodie.jpg" alt="Yaweh hoodie" onclick="openModal(this, 6)">
+            <img src="yaweh2.hoodie.jpg" alt="Yaweh2 hoodie" onclick="openModal(this, 7)">
+            <img src="walk.tshirt.jpg" alt="Walk tshirt" onclick="openModal(this, 8)">
+            <img src="stylefix.hoodie.jpg" alt="Style-Fix hoodie" onclick="openModal(this, 9)">
         </div>
     </main>
 
