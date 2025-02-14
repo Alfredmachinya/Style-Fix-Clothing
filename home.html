@@ -22,6 +22,12 @@
         }
         .navbar img {
             height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .navbar .logo {
+            display: flex;
+            align-items: center;
         }
         .navbar ul {
             display: flex;
@@ -35,6 +41,10 @@
         .navbar ul li a {
             color: #fff;
             text-decoration: none;
+            transition: color 0.3s;
+        }
+        .navbar ul li a:hover {
+            color: #ccc;
         }
         .container {
             display: grid;
@@ -58,7 +68,7 @@
             object-fit: cover;
             border-radius: 10px;
         }
-        .info {
+        .card .info {
             position: absolute;
             bottom: 0;
             left: 0;
@@ -113,7 +123,10 @@
 <body>
 
     <div class="navbar">
-        <img src="logo.jpg" alt="Style Fix Clothing">
+        <div class="logo">
+            <img src="logo.jpg" alt="Style Fix Clothing">
+            <span>Style Fix Clothing</span>
+        </div>
         <ul>
             <li><a href="#">Menu</a></li>
             <li><a href="#">Services</a></li>
