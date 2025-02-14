@@ -11,21 +11,45 @@
             padding: 0;
             background-color: #f4f4f4;
         }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+        }
+        .navbar img {
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+        }
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar ul li {
+            margin-left: 20px;
+        }
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .navbar ul li a:hover {
+            color: #ccc;
+        }
         .container {
             width: 80%;
             margin: auto;
             overflow: hidden;
             padding: 20px;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2em;
         }
         .service {
             background: #fff;
@@ -40,6 +64,10 @@
             max-width: 200px;
             margin-right: 20px;
             border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .service img:hover {
+            transform: scale(1.1);
         }
         .service h2 {
             margin-top: 0;
@@ -47,20 +75,42 @@
         .service p {
             margin: 10px 0;
         }
-        footer {
-            background: #333;
+        .footer {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #333;
             color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
+        }
+        .footer .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .footer .social-icons img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Style Fix Clothing Services</h1>
-    </header>
+    <div class="navbar">
+        <div class="logo">
+            <img src="logo.jpg" alt="Style Fix Clothing">
+            <span>Style Fix Clothing</span>
+        </div>
+        <ul>
+            <li><a href="home.html">Menu</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Contact us</a></li>
+        </ul>
+    </div>
     <div class="container">
+        <h1>Our Services</h1>
         <div class="service">
             <img src="walk.tshirt.jpg" alt="T-Shirt Printing">
             <div>
@@ -119,8 +169,14 @@
         </div>
     </div>
     <footer>
-        <p>&copy; 2025 Style Fix Clothing. All rights reserved.</p>
+       <div class="footer">
+        <div class="social-icons">
+            <a href="#"><img src="facebook.jpg" alt="Facebook"></a>
+            <a href="#"><img src="instagram.jpg" alt="Instagram"></a>
+            <a href="https://wa.me/c/26773684840"><img src="whatsapp.jpg" alt="Whatsapp"></a>
+            <a href="#"><img src="tiktok.jpg" alt="Tiktok"></a>
+        </div>
+    </div> 
     </footer>
-   
 </body>
 </html>
