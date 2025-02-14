@@ -78,19 +78,24 @@
         .card-content {
             padding: 10px;
         }
-        .card-content h2 {
-            margin: 0 0 10px 0;
-            font-size: 1.2em;
-            color: #333;
-        }
-        .card-content p {
-            color: #666;
-            margin-bottom: 10px;
-        }
         .card-content .price {
             font-size: 1em;
             color: #333;
             margin-bottom: 10px;
+        }
+        .card-content .button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            background-color: blue;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .card-content .button:hover {
+            background-color: darkblue;
         }
         .cart {
             margin-top: 20px;
@@ -163,49 +168,43 @@
         <div class="card">
             <img src="faith.hoodie.jpg" alt="Hoodie 1">
             <div class="card-content">
-                <h2>Cozy Hoodie</h2>
-                <p>Stay warm and stylish with our cozy hoodies, perfect for any occasion!</p>
                 <div class="price">P320.99</div>
+                <a href="javascript:void(0);" class="button" onclick="addToCart('Cozy Hoodie', 320.99)">Add to Cart</a>
             </div>
         </div>
         <div class="card">
             <img src="faith.fear.hoodie.jpg" alt="Hoodie 2">
             <div class="card-content">
-                <h2>Classic Hoodie</h2>
-                <p>Our classic hoodies offer both comfort and style, ideal for everyday wear.</p>
                 <div class="price">P320.99</div>
+                <a href="javascript:void(0);" class="button" onclick="addToCart('Classic Hoodie', 320.99)">Add to Cart</a>
             </div>
         </div>
         <div class="card">
             <img src="pray.hoodie.jpg" alt="Hoodie 3">
             <div class="card-content">
-                <h2>Sporty Hoodie</h2>
-                <p>Get active with our sporty hoodies, designed for performance and comfort.</p>
                 <div class="price">P320.99</div>
+                <a href="javascript:void(0);" class="button" onclick="addToCart('Sporty Hoodie', 320.99)">Add to Cart</a>
             </div>
         </div>
         <div class="card">
             <img src="yaweh.hoodie.jpg" alt="Hoodie 4">
             <div class="card-content">
-                <h2>Cozy Hoodie</h2>
-                <p>Stay warm and stylish with our cozy hoodies, perfect for any occasion!</p>
                 <div class="price">P350.99</div>
+                <a href="javascript:void(0);" class="button" onclick="addToCart('Cozy Hoodie', 350.99)">Add to Cart</a>
             </div>
         </div>
         <div class="card">
             <img src="yaweh2.hoodie.jpg" alt="Hoodie 5">
             <div class="card-content">
-                <h2>Classic Hoodie</h2>
-                <p>Our classic hoodies offer both comfort and style, ideal for everyday wear.</p>
                 <div class="price">P350.99</div>
+                <a href="javascript:void(0);" class="button" onclick="addToCart('Classic Hoodie', 350.99)">Add to Cart</a>
             </div>
         </div>
         <div class="card">
             <img src="stylefix.hoodie.jpg" alt="Hoodie 6">
             <div class="card-content">
-                <h2>Sporty Hoodie</h2>
-                <p>Get active with our sporty hoodies, designed for performance and comfort.</p>
                 <div class="price">P320.99</div>
+                <a href="javascript:void(0);" class="button" onclick="addToCart('Sporty Hoodie', 320.99)">Add to Cart</a>
             </div>
         </div>
     </div>
