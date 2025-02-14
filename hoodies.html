@@ -213,7 +213,7 @@
         <h2>Shopping Cart</h2>
         <div class="cart-items"></div>
         <div class="total">Total: P0.00</div>
-        <a href="https://wa.me/26773684840" class="order-button">Place your Order Now</a>
+        <a href="javascript:void(0);" class="order-button" onclick="sendOrder()">Place your Order Now</a>
     </div>
 
     <script>
@@ -243,7 +243,17 @@
             });
             document.querySelector('.total').textContent = 'Total: P' + totalAmount.toFixed(2);
         }
-    </script>
 
-</body>
+        function sendOrder() {
+            let orderMessage = "Hello, I'd like to place an order for the following items:%0A";
+            cart.forEach(item => {
+                orderMessage += `- ${item.product}: P${item.price.toFixed(2)}%0A`;
+            });
+            orderMessage += `Total: P${totalAmount.toFixed(2)}`;
+
+            const whatsappLink = `https://wa.me/26773684840?text=${encodeURIComponent(orderMessage)}`;
+            window.open(whatsappLink, '_blank');
+        }
+    </script
+  </body>
 </html>
