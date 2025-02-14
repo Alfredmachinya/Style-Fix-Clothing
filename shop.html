@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order a T-Shirt</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+        }
+        .navbar img {
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+        }
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar ul li {
+            margin-left: 20px;
+        }
+    .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .navbar ul li a:hover {
+            color: #ccc;
+        }
+
+    h1 {
+      text-align: center;
+      background-color: #000;
+      color: #fff;
+      padding: 20px 10px;
+      margin: 0;
+    }
+
+     p {
+       text-align: center;
+      background-color: #000;
+      color: #fff;
+      padding: 20px 10px;
+      margin: 5px 0 0;
+    }
+
+    /* Form Section */
+    .order-form {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    .order-form form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .order-form label {
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    .order-form input,
+    .order-form select,
+    .order-form textarea {
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .order-form button {
+      padding: 10px;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .order-form button:hover {
+      background-color: #333;
+    }
+
+    #responseMessage {
+      text-align: center;
+      margin-top: 20px;
+      font-weight: bold;
+      color: green;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #000;
+      color: #fff;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+          .footer {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+        .footer .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .footer .social-icons img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+        <div class="logo">
+            <img src="logo.jpg" alt="Style Fix Clothing">
+            <span>Style Fix Clothing</span>
+        </div>
+        <ul>
+            <li><a href="home.html">Menu</a></li>
+            <li><a href="services.html">Services</a></li>
+             <li><a href="#">Shop</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Testimonials</a></li>
+             <li><a href="#">Contact us</a></li>
+        </ul>
+    </div>
+    <h1>Order Your T-Shirt</h1>
+    <p>Fill out the form below to place your order.</p>
+ 
+
+  <section class="order-form">
+    <form id="orderForm" onsubmit="handleOrder(event)">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your name..." required>
+      
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" placeholder="Your email..." required>
+      
+      <label for="size">T-Shirt Size:</label>
+      <select id="size" name="size" required>
+        <option value="">Select a size...</option>
+        <option value="Small">Small</option>
+        <option value="Medium">Medium</option>
+        <option value="Large">Large</option>
+        <option value="X-Large">X-Large</option>
+      </select>
+
+      <label for="color">T-Shirt Color:</label>
+      <select id="color" name="color" onchange="toggleCustomColorInput()" required>
+        <option value="">Select a color...</option>
+        <option value="Black">Black</option>
+        <option value="White">White</option>
+        <option value="Blue">Blue</option>
+        <option value="Red">Red</option>
+        <option value="Custom">Specify</option>
+      </select>
+
+      <input type="text" id="customColor" name="customColor" placeholder="Specify your custom color..." style="display: none;">
+
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" name="quantity" min="1" placeholder="Number of t-shirts..." required>
+
+      <label for="message">Special Instructions:</label>
+      <textarea id="message" name="message" placeholder="Any special requests or instructions..." rows="4"></textarea>
+
+      <button type="submit">Place Order</button>
+    </form>
+    <p id="responseMessage"></p>
+  </section>
+
+  <div class="footer">
+        <div class="social-icons">
+            <a href="#"><img src="facebook.jpg" alt="Facebook"></a>
+            <a href="#"><img src="instagram.jpg" alt="Instagram"></a>
+            <a href="https://wa.me/c/26773684840"><img src="whatsapp.jpg" alt="Whatsapp"></a>
+            <a href="#"><img src="tiktok.jpg" alt="Tiktok"></a>
+        </div>
+    </div> 
+
+  <script>
+    function toggleCustomColorInput() {
+      const colorSelect = document.getElementById("color");
+      const customColorInput = document.getElementById("customColor");
+      if (colorSelect.value === "Custom") {
+        customColorInput.style.display = "block";
+      } else {
+        customColorInput.style.display = "none";
+        customColorInput.value = ""; // Clear custom color input
+      }
+    }
+
+    function handleOrder(event) {
+      event.preventDefault();
+
+      // Retrieve form data
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const size = document.getElementById("size").value;
+      const color = document.getElementById("color").value;
+      const customColor = document.getElementById("customColor").value;
+      const quantity = document.getElementById("quantity").value;
+      const message = document.getElementById("message").value;
+
+      // Determine the final color
+      const finalColor = color === "Custom" ? customColor : color;
+
+      // Construct WhatsApp message
+      const whatsappMessage = `
+        Hello! I would like to place an order:
+        - Name: ${name}
+        - Email: ${email}
+        - Size: ${size}
+        - Color: ${finalColor}
+        - Quantity: ${quantity}
+        - Special Instructions: ${message}
+      `;
+
+      // Redirect to WhatsApp
+      const encodedMessage = encodeURIComponent(whatsappMessage);
+      const whatsappURL = `https://wa.me/+26773684840?text=${encodedMessage}`;
+      window.open(whatsappURL, "_blank");
+
+      // Show confirmation message
+      const responseMessage = document.getElementById("responseMessage");
+      responseMessage.textContent = `Thank you, ${name}! Your order has been sent successfully.`;
+    }
+  </script>
+</body>
+</html>
