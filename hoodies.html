@@ -166,45 +166,45 @@
 
     <div class="container">
         <div class="card">
-            <img src="faith.hoodie.jpg" alt="Hoodie 1">
+            <img src="faith.'hoodie.jpg" alt="Hoodie 1">
             <div class="card-content">
                 <div class="price">P320.99</div>
-                <a href="javascript:void(0);" class="button" onclick="addToCart('Cozy Hoodie', 320.99)">Add to Cart</a>
+                <a href="javascript:void(0);" class="button" onclick="addToCart('Faith Hoodie', 320.99)">Add to Cart</a>
             </div>
         </div>
         <div class="card">
             <img src="faith.fear.hoodie.jpg" alt="Hoodie 2">
             <div class="card-content">
                 <div class="price">P320.99</div>
-                <a href="javascript:void(0);" class="button" onclick="addToCart('Classic Hoodie', 320.99)">Add to Cart</a>
+                <a href="javascript:void(0);" class="button" onclick="addToCart('faith.fear Hoodie', 320.99)">Add to Cart</a>
             </div>
         </div>
         <div class="card">
             <img src="pray.hoodie.jpg" alt="Hoodie 3">
             <div class="card-content">
                 <div class="price">P320.99</div>
-                <a href="javascript:void(0);" class="button" onclick="addToCart('Sporty Hoodie', 320.99)">Add to Cart</a>
+                <a href="javascript:void(0);" class="button" onclick="addToCart('pray Hoodie', 320.99)">Add to Cart</a>
             </div>
         </div>
         <div class="card">
             <img src="yaweh.hoodie.jpg" alt="Hoodie 4">
             <div class="card-content">
                 <div class="price">P350.99</div>
-                <a href="javascript:void(0);" class="button" onclick="addToCart('Cozy Hoodie', 350.99)">Add to Cart</a>
+                <a href="javascript:void(0);" class="button" onclick="addToCart('yaweh Hoodie', 350.99)">Add to Cart</a>
             </div>
         </div>
         <div class="card">
             <img src="yaweh2.hoodie.jpg" alt="Hoodie 5">
             <div class="card-content">
                 <div class="price">P350.99</div>
-                <a href="javascript:void(0);" class="button" onclick="addToCart('Classic Hoodie', 350.99)">Add to Cart</a>
+                <a href="javascript:void(0);" class="button" onclick="addToCart('yaweh.blue Hoodie', 350.99)">Add to Cart</a>
             </div>
         </div>
         <div class="card">
             <img src="stylefix.hoodie.jpg" alt="Hoodie 6">
             <div class="card-content">
                 <div class="price">P320.99</div>
-                <a href="javascript:void(0);" class="button" onclick="addToCart('Sporty Hoodie', 320.99)">Add to Cart</a>
+                <a href="javascript:void(0);" class="button" onclick="addToCart('stylefix Hoodie', 320.99)">Add to Cart</a>
             </div>
         </div>
     </div>
@@ -245,9 +245,9 @@
         }
 
         function sendOrder() {
-            let orderMessage = "Hello, I'd like to place an order for the following items:%0A";
+            let orderMessage = "Hello, I'd like to place an order for the following items:";
             cart.forEach(item => {
-                orderMessage += `- ${item.product}: P${item.price.toFixed(2)}%0A`;
+                orderMessage += `- ${item.product}: P${item.price.toFixed(2)}`;
             });
             orderMessage += `Total: P${totalAmount.toFixed(2)}`;
 
