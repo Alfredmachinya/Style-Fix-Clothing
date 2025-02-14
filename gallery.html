@@ -5,92 +5,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Style Fix Clothing Gallery</title>
     <style>
-      body {
-          font-family: Arial, sans-serif;
-          margin: 0;
-          padding: 0;
-      }
-      .navbar {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 10px 20px;
-          background-color: #333;
-          color: #fff;
-      }
-      .navbar img {
-          height: 50px;
-          border-radius: 50%;
-          margin-right: 10px;
-      }
-      .navbar .logo {
-          display: flex;
-          align-items: center;
-      }
-      .navbar ul {
-          display: flex;
-          list-style: none;
-          margin: 0;
-          padding: 0;
-      }
-      .navbar ul li {
-          margin-left: 20px;
-      }
-      .navbar ul li a {
-          color: #fff;
-          text-decoration: none;
-          transition: color 0.3s;
-      }
-      .navbar ul li a:hover {
-          color: #ccc;
-      }
-      main {
-          padding: 20px;
-      }
-      .gallery {
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-          gap: 10px;
-          padding: 10px;
-      }
-      .gallery img {
-          width: 100%;
-          height: 300px;
-          object-fit: cover;
-          cursor: pointer;
-          border-radius: 5px;
-      }
-      .modal {
-          display: none;
-          position: fixed;
-          z-index: 1000;
-          left: 0;
-          top: 0;
-          width: 100%;
-          height: 100%;
-          overflow: auto;
-          background-color: rgba(0, 0, 0, 0.9);
-      }
-      .modal img {
-          margin: auto;
-          display: block;
-          max-width: 80%;
-          max-height: 80%;
-      }
-      .modal #caption {
-          color: #fff;
-          text-align: center;
-          margin-top: 10px;
-      }
-      .close {
-          position: absolute;
-          top: 20px;
-          right: 35px;
-          color: #fff;
-          font-size: 40px;
-          font-weight: bold;
-          cursor: pointer;
-      }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+        }
+        .navbar img {
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+        }
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar ul li {
+            margin-left: 20px;
+        }
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .navbar ul li a:hover {
+            color: #ccc;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        h2 {
+            text-align: center;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            padding: 10px;
+        }
+        .gallery img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        .modal img {
+            margin: auto;
+            display: block;
+            max-width: 80%;
+            max-height: 80%;
+        }
+        .modal #caption {
+            color: #fff;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: #fff;
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.3s;
+            user-select: none;
+        }
+        .prev {
+            left: 20px;
+        }
+        .next {
+            right: 20px;
+        }
+        .prev:hover, .next:hover {
+            color: #ccc;
+        }
     </style>
 </head>
 <body>
@@ -113,35 +143,55 @@
     <main>
         <h2>Gallery</h2>
         <div class="gallery">
-            <img src="bestill.cap.jpg" alt="Clothing 1" onclick="openModal(this)">
-            <img src="faith.bag.jpg" alt="Clothing 2" onclick="openModal(this)">
-            <img src="faith.cushion.jpg" alt="Clothing 3" onclick="openModal(this)">
-            <img src="faith.'hoodie.jpg" alt="Clothing 4" onclick="openModal(this)">
-            <img src="jesus.buckethead.jpg" alt="Clothing 5" onclick="openModal(this)">
+            <img src="bestill.cap.jpg" alt="Clothing 1" onclick="openModal(this, 0)">
+            <img src="faith.bag.jpg" alt="Clothing 2" onclick="openModal(this, 1)">
+            <img src="faith.cushion.jpg" alt="Clothing 3" onclick="openModal(this, 2)">
+            <img src="faith.'hoodie.jpg" alt="Clothing 4" onclick="openModal(this, 3)">
+            <img src="jesus.buckethead.jpg" alt="Clothing 5" onclick="openModal(this, 4)">
         </div>
     </main>
 
-    <div id="modal" class="modal" onclick="closeModal()">
-        <span class="close">&times;</span>
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
         <img class="modal-content" id="modalImage">
         <div id="caption"></div>
+        <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+        <a class="next" onclick="changeImage(1)">&#10095;</a>
     </div>
 
     <script>
-      function openModal(imgElement) {
-          const modal = document.getElementById("modal");
-          const modalImage = document.getElementById("modalImage");
-          const captionText = document.getElementById("caption");
+        const images = document.querySelectorAll(".gallery img");
+        let currentIndex = 0;
 
-          modal.style.display = "block";
-          modalImage.src = imgElement.src;
-          captionText.innerHTML = imgElement.alt;
-      }
+        function openModal(imgElement, index) {
+            const modal = document.getElementById("modal");
+            const modalImage = document.getElementById("modalImage");
+            const captionText = document.getElementById("caption");
 
-      function closeModal() {
-          const modal = document.getElementById("modal");
-          modal.style.display = "none";
-      }
+            currentIndex = index;
+            modal.style.display = "block";
+            modalImage.src = imgElement.src;
+            captionText.innerHTML = imgElement.alt;
+        }
+
+        function closeModal() {
+            const modal = document.getElementById("modal");
+            modal.style.display = "none";
+        }
+
+        function changeImage(direction) {
+            currentIndex += direction;
+            if (currentIndex < 0) {
+                currentIndex = images.length - 1;
+            } else if (currentIndex >= images.length) {
+                currentIndex = 0;
+            }
+            const modalImage = document.getElementById("modalImage");
+            const captionText = document.getElementById("caption");
+
+            modalImage.src = images[currentIndex].src;
+            captionText.innerHTML = images[currentIndex].alt;
+        }
     </script>
 </body>
 </html>
