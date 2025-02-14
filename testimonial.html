@@ -46,8 +46,11 @@
         .navbar ul li a:hover {
             color: #ccc;
         }
+        .testimonials-container {
+            position: relative;
+        }
         .testimonials {
-            display: grid;
+            display: none;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 20px;
             padding: 20px;
@@ -69,6 +72,9 @@
             margin: 0;
             font-style: italic;
         }
+        .testimonial h3 {
+            margin-top: 10px;
+        }
         .footer {
             margin-top: 40px;
             padding: 20px;
@@ -85,6 +91,31 @@
             height: 40px;
             border-radius: 50%;
         }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: #333;
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.3s;
+            user-select: none;
+            background-color: #fff;
+            border-radius: 50%;
+            border: 1px solid #ccc;
+        }
+        .prev:hover, .next:hover {
+            background-color: #ccc;
+        }
+        .prev {
+            left: 10px;
+        }
+        .next {
+            right: 10px;
+        }
     </style>
 </head>
 <body>
@@ -97,37 +128,48 @@
         <ul>
             <li><a href="home.html">Menu</a></li>
             <li><a href="services.html">Services</a></li>
-             <li><a href="#">Shop</a></li>
+            <li><a href="#">Shop</a></li>
             <li><a href="#">About Us</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="testimonials.html">Testimonials</a></li>
-             <li><a href="#">Contact us</a></li>
+            <li><a href="#">Contact us</a></li>
         </ul>
     </div>
 
     <h1>Testimonials</h1>
 
-    <div class="testimonials">
-        <div class="testimonial">
-            <img src="yaweh.hoodie.jpg" alt="Customer 1">
-            <p>"Style Fix Clothing has completely transformed my wardrobe. The quality and design are exceptional!"</p>
+    <div class="testimonials-container">
+        <div class="testimonials" id="testimonials1">
+            <div class="testimonial">
+                <img src="yaweh.hoodie.jpg" alt="Customer 1">
+                <h3>John Doe</h3>
+                <p>"Style Fix Clothing has completely transformed my wardrobe. The quality and design are exceptional!"</p>
+            </div>
+            <div class="testimonial">
+                <img src="customer2.jpg" alt="Customer 2">
+                <h3>Jane Smith</h3>
+                <p>"I love the custom hoodie I got from Style Fix Clothing. It’s so comfy and stylish!"</p>
+            </div>
+            <div class="testimonial">
+                <img src="customer3.jpg" alt="Customer 3">
+                <h3>Michael Johnson</h3>
+                <p>"The customer service at Style Fix Clothing is outstanding. They helped me find the perfect outfit for my event."</p>
+            </div>
         </div>
-        <div class="testimonial">
-            <img src="customer2.jpg" alt="Customer 2">
-            <p>"I love the custom hoodie I got from Style Fix Clothing. It’s so comfy and stylish!"</p>
+        <div class="testimonials" id="testimonials2">
+            <div class="testimonial">
+                <img src="customer4.jpg" alt="Customer 4">
+                <h3>Emily Davis</h3>
+                <p>"I’ve been buying from Style Fix Clothing for years, and they never disappoint. Highly recommend!"</p>
+            </div>
+            <div class="testimonial">
+                <img src="customer5.jpg" alt="Customer 5">
+                <h3>Sarah Wilson</h3>
+                <p>"Amazing prints and great service. I’m so happy with my purchases from Style Fix Clothing."</p>
+            </div>
         </div>
-        <div class="testimonial">
-            <img src="customer3.jpg" alt="Customer 3">
-            <p>"The customer service at Style Fix Clothing is outstanding. They helped me find the perfect outfit for my event."</p>
-        </div>
-        <div class="testimonial">
-            <img src="customer4.jpg" alt="Customer 4">
-            <p>"I’ve been buying from Style Fix Clothing for years, and they never disappoint. Highly recommend!"</p>
-        </div>
-        <div class="testimonial">
-            <img src="customer5.jpg" alt="Customer 5">
-            <p>"Amazing prints and great service. I’m so happy with my purchases from Style Fix Clothing."</p>
-        </div>
+        <a class="prev" onclick="changeTestimonials(-1)">&#10094;</a>
+        <a class="next" onclick="changeTestimonials(1)">&#10095;</a>
     </div>
 
     <div class="footer">
@@ -138,6 +180,29 @@
             <a href="#"><img src="tiktok.jpg" alt="Tiktok"></a>
         </div>
     </div>
+
+    <script>
+        let currentTestimonialIndex = 1;
+        showTestimonials(currentTestimonialIndex);
+
+        function showTestimonials(index) {
+            let testimonials = document.querySelectorAll('.testimonials');
+            if (index > testimonials.length) {
+                currentTestimonialIndex = 1;
+            }
+            if (index < 1) {
+                currentTestimonialIndex = testimonials.length;
+            }
+            for (let i = 0; i < testimonials.length; i++) {
+                testimonials[i].style.display = 'none';
+            }
+            testimonials[currentTestimonialIndex - 1].style.display = 'grid';
+        }
+
+        function changeTestimonials(direction) {
+            showTestimonials(currentTestimonialIndex += direction);
+        }
+    </script>
 
 </body>
 </html>
