@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Fix Clothing - Testimonials</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            background-color: #f8f8f8;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+        }
+        .navbar img {
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+        }
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar ul li {
+            margin-left: 20px;
+        }
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .navbar ul li a:hover {
+            color: #ccc;
+        }
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .testimonial {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .testimonial img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            max-width: 150px;
+            margin-bottom: 10px;
+        }
+        .testimonial p {
+            margin: 0;
+            font-style: italic;
+        }
+        .footer {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+        .footer .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .footer .social-icons img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo">
+            <img src="logo.jpg" alt="Style Fix Clothing">
+            <span>Style Fix Clothing</span>
+        </div>
+        <ul>
+            <li><a href="home.html">Menu</a></li>
+            <li><a href="services.html">Services</a></li>
+             <li><a href="#">Shop</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+             <li><a href="#">Contact us</a></li>
+        </ul>
+    </div>
+
+    <h1>Testimonials</h1>
+
+    <div class="testimonials">
+        <div class="testimonial">
+            <img src="yaweh.hoodie.jpg" alt="Customer 1">
+            <p>"Style Fix Clothing has completely transformed my wardrobe. The quality and design are exceptional!"</p>
+        </div>
+        <div class="testimonial">
+            <img src="customer2.jpg" alt="Customer 2">
+            <p>"I love the custom hoodie I got from Style Fix Clothing. It’s so comfy and stylish!"</p>
+        </div>
+        <div class="testimonial">
+            <img src="customer3.jpg" alt="Customer 3">
+            <p>"The customer service at Style Fix Clothing is outstanding. They helped me find the perfect outfit for my event."</p>
+        </div>
+        <div class="testimonial">
+            <img src="customer4.jpg" alt="Customer 4">
+            <p>"I’ve been buying from Style Fix Clothing for years, and they never disappoint. Highly recommend!"</p>
+        </div>
+        <div class="testimonial">
+            <img src="customer5.jpg" alt="Customer 5">
+            <p>"Amazing prints and great service. I’m so happy with my purchases from Style Fix Clothing."</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="social-icons">
+            <a href="#"><img src="facebook.jpg" alt="Facebook"></a>
+            <a href="#"><img src="instagram.jpg" alt="Instagram"></a>
+            <a href="https://wa.me/c/26773684840"><img src="whatsapp.jpg" alt="Whatsapp"></a>
+            <a href="#"><img src="tiktok.jpg" alt="Tiktok"></a>
+        </div>
+    </div>
+
+</body>
+</html>
