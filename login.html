@@ -1,93 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login-page</title>
-    
-  <style>
-   
-.gradient-custom-2 {
-/* fallback for old browsers */
-background: #fccb90;
-
-/* Chrome 10-25, Safari 5.1-6 */
-background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
-
-/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+    <title>stylfixclothing Login Form</title>
+    <style>
+       
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    line-height: 1.5;
+    min-height: 100vh;
+    background: #f3f3f3;
+    flex-direction: column;
+    margin: 0;
 }
 
-@media (min-width: 768px) {
-.gradient-form {
-height: 100vh !important;
+.main {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    transition: transform 0.2s;
+    width: 500px;
+    text-align: center;
 }
+
+h1 {
+    color: #4CAF50;
 }
-@media (min-width: 769px) {
-.gradient-custom-2 {
-border-top-right-radius: .3rem;
-border-bottom-right-radius: .3rem;
+
+label {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #555;
+    font-weight: bold;
 }
+
+input {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
-  </style>
+
+button {
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    background-color: #4CAF50;
+    width: 100%;
+    font-size: 16px;
+}
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    </style>
 </head>
+
 <body>
-   <section class="h-100 gradient-form" style="background-color: #eee;">
-  <div class="container py-5 h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-xl-10">
-        <div class="card rounded-3 text-black">
-          <div class="row g-0">
-            <div class="col-lg-6">
-              <div class="card-body p-md-5 mx-md-4">
+    <div class="main">
+        <h1>Style Fix Clothing</h1>
+        <h3>Enter your login credentials</h3>
 
-                <div class="text-center">
-                  <img src="https://scontent-jnb2-1.xx.fbcdn.net/v/t39.30808-6/462910870_122096234864577016_203018039203301835_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeGGTwwb63MOsIr4mEHWTzR5xFnjd-SVF4fEWeN35JUXh3ATgfCKucD_Nh_akEFpnyFmZBIKjUXusq9iUO9UqFgW&_nc_ohc=8s05Fiw55WQQ7kNvgFBafqa&_nc_oc=Adis-U-XgPIQ9KsRz4TajexPFg_egYGprzhVfXghymoAxXQWRQoOaWlOjMpJRE0aSvU&_nc_zt=23&_nc_ht=scontent-jnb2-1.xx&_nc_gid=A8wB98GMhgjQDyiazSQxgLd&oh=00_AYG7h9fOB4GZHSYHpACkqaKyYk3Ac9543xzXISyjow9T5w&oe=67D5D3E8"
-                    style="width: 185px;" alt="logo">
-                  <h4 class="mt-1 mb-5 pb-1">Style Fix Clothing</h4>
-                </div>
+        <form action="">
+            <label for="first">
+                Username:
+            </label>
+            <input type="text" id="first" name="first" 
+                placeholder="Enter your Username" required>
 
-                <form>
-                  <p>Please login to your account</p>
+            <label for="password">
+                Password:
+            </label>
+            <input type="password" id="password" name="password" 
+                placeholder="Enter your Password" required>
 
-                  <div data-mdb-input-init class="form-outline mb-4">
-                    <input type="email" id="form2Example11" class="form-control"
-                      placeholder="Entre username" />
-                    <label class="form-label" for="form2Example11">Username</label>
-                  </div>
-
-                  <div data-mdb-input-init class="form-outline mb-4">
-                    <input type="password" id="form2Example22" class="form-control" />
-                    <label class="form-label" for="form2Example22">Password</label>
-                  </div>
-
-                  <div class="text-center pt-1 mb-5 pb-1">
-                    <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button">Log
-                      in</button>
-                    <a class="text-muted" href="#!">Forgot password?</a>
-                  </div>
-
-                  <div class="d-flex align-items-center justify-content-center pb-4">
-                    <p class="mb-0 me-2">Don't have an account?</p>
-                    <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-danger">Create new</button>
-                  </div>
-
-                </form>
-
-              </div>
+            <div class="wrap">
+                <button type="submit">
+                    Submit
+                </button>
             </div>
-            <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
-              <div class="text-white px-3 py-4 p-md-5 mx-md-4">
-                <h4 class="mb-4">We are more than just a company</h4>
-                <p class="small mb-0">"Welcome to Style Fix Clothing – Your Fashion, Your Identity.Style Fix Clothing – empowering your wardrobe. Where style meets comfort. Log in to start your transformation!"</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+        </form>
+        
+        <p>Not registered?
+            <a href="#" style="text-decoration: none;">
+                Create an account
+            </a>
+        </p>
     </div>
 </body>
+
 </html>
