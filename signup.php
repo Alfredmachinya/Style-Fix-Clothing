@@ -2,10 +2,10 @@
 // Database connection
 $servername = "localhost";
 $username = "root"; 
-$password = ""; 
+$password = "2025"; 
 $dbname = "stylefixclothing"; 
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($localhost, $root, $2025, $stylefixclothing);
 
 // Check connection
 if ($conn->connect_error) {
